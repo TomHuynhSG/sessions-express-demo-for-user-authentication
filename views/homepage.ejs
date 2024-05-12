@@ -1,0 +1,51 @@
+<!-- Include head file with scriptlet tag -->
+<%- include('./partials/head.ejs') %>
+<link rel="stylesheet" href="/css/homepage.css"/>
+<body>
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Manage Session</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="/signout" class="nav-link">Sign out</a></li>
+      </ul>
+    </header>
+
+
+    
+      <div class="title">Welcome <%= user.name %></div>
+    
+      <div class="content">
+        <div class="userInfo">
+          <div class="info">
+            <strong>Username: </strong>
+            <p><%= user.username %></p>
+          </div>
+
+          <div class="info">
+            <strong>Name: </strong>
+            <p><%= user.name %></p>
+          </div>
+
+          <div class="info">
+            <strong>Date of Birth: </strong>
+            <p><%= dob %></p>
+          </div>
+
+          <div class="info">
+            <strong>Bio: </strong>
+            <p><%= user.bio %></p>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
